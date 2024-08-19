@@ -17,5 +17,7 @@ public class Exercise {
         int c = a + b;
 
         System.out.println(c);
+
+        // new str
     }
 }
