@@ -6,7 +6,7 @@ public class Task1 {
         double a = 5.0;
         double b = a / 2;
 
-        System.out.println(b);
+        System.out.println("В каждой кассе по " + b + " руб");
 
     }
 }

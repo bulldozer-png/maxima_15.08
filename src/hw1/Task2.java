@@ -7,7 +7,7 @@ public class Task2 {
         int b = 20;
         int s = a * b; //Прямоугольник
 
-        System.out.println(s);
+        System.out.println("Площадь прямоугольника = " + s);
 
     }
 }
