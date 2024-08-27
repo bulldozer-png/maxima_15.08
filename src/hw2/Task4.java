@@ -7,14 +7,16 @@ public class Task4 {
 
         Scanner scanner = new Scanner(System.in);
 
-        int num = scanner.nextInt();
+        int number = scanner.nextInt();
 
-        if (num > 0) {
-            num = num * 2;
-            System.out.println(num);
-        } else if (num < 0) {
-            num = num + 1;
-            System.out.println(num);
+        if (number > 0) {
+            number = number * 2;
+            System.out.println(number);
+
+        } else if (number < 0) {
+            number = number + 1;
+            System.out.println(number);
+
         } else {
             System.out.println(0);
         }

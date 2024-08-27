@@ -12,6 +12,7 @@ public class Task6 {
 
         if (a < b + c && b < a + c && c < a + b) {
             System.out.println("Треугольник существует.");
+
         } else {
             System.out.println("Треугольник не существует.");
         }

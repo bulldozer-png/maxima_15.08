@@ -7,9 +7,9 @@ public class Task3 {
 
         Scanner scanner = new Scanner(System.in);
 
-        int num = scanner.nextInt();
+        int number = scanner.nextInt();
 
-        switch (num) {
+        switch (number) {
             case (12):
             case (1):
             case (2):
