@@ -12,8 +12,9 @@ public class Task6 {
         int m = scanner.nextInt();
         int d = scanner.nextInt();
 
-        System.out.println("Меня зовут " + name + ".");
-        System.out.println("Я родился " + d + "." + m + "." + y);
+        String aboutMe = String.format("Меня зовут %s. \nЯ родился %d.%d.%d", name, d,m,y);
+
+        System.out.println(aboutMe);
 
     }
 }

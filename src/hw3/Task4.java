@@ -10,14 +10,13 @@ public class Task4 {
         int sum = 0;
 
         while (true) {
+
             int number = scanner.nextInt();
+            sum = sum + number;
 
             if (number == -1) {
-                sum = sum - 1;
                 break;
             }
-
-            sum = sum + number;
 
         }
         System.out.println("Сумма чисел равна " + sum);
