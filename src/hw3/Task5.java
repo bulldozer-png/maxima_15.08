@@ -6,13 +6,14 @@ public class Task5 {
         int counterOne = 1;
 
         while (counterOne <= 10) {
-            System.out.println();
+
             int counterTwo = 1;
 
             while (counterTwo <= 10) {
                 System.out.print(counterOne * counterTwo++ + " ");
             }
 
+            System.out.println();
             counterOne++;
         }
 
