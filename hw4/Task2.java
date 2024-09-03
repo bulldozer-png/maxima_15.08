@@ -23,5 +23,6 @@ public class Task2 {
 
         String result = String.format("Максимальное значение %d", maxValue);
         System.out.println(result);
+
     }
 }
