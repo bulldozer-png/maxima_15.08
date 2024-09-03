@@ -4,6 +4,7 @@ public class Task4 {
     public static void main(String[] args) {
 
         System.out.println("cringe");
+        System.out.println("cringe2");
 
     }
 }
