@@ -13,20 +13,12 @@ public class Task5 {
 
         for (int i = 0; i < numbers.length; i++) {
             numbers[i] = scanner.nextInt();
+            if (i < 10) {
+                littleArray1[i] = numbers[i];
+            } else {
+                littleArray2[i % 10] = numbers[i];
+            }
         }
-
-        int a = 0;
-        while (a < littleArray1.length) {
-            littleArray1[a] = numbers[a];
-            a++;
-        }
-        int b = 0;
-        while (b < littleArray2.length) {
-            littleArray2[b] = numbers[a];
-            b++;
-            a++;
-        }
-
 
         for (int j = 0; j < littleArray2.length; j++) {
             System.out.println(littleArray2[j]);

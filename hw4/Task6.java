@@ -6,26 +6,29 @@ public class Task6 {
         int[] numbers = new int[20];
         int counter = 0;
 
+        int resultMax = 0;
+        int resultMin = 0;
+
+        int maxValue = 2147483647;
+        int minValue = -2147483648;
+
         while (counter < numbers.length) {
-            numbers[counter++] = (int) (Math.random() * 100);
-        }
 
-        int maxValue = 0;
-        int minValue;
-        for (int i = 0; i < numbers.length; i++) {
-            if (maxValue < numbers[i]) {
-                maxValue = numbers[i];
+            numbers[counter] = (int) (Math.random() * 100);
+
+            if (numbers[counter] > minValue) {
+                resultMax = numbers[counter];
+                minValue = numbers[counter];
             }
-        }
 
-        minValue = maxValue;
-        for (int j = 0; j < numbers.length; j++) {
-            if (minValue > numbers[j]) {
-                minValue = numbers[j];
+            if (numbers[counter] < maxValue) {
+                resultMin = numbers[counter];
+                maxValue = numbers[counter];
             }
+            counter++;
         }
 
-        String result = String.format("%d %d", maxValue, minValue);
+        String result = String.format("%d %d", resultMax, resultMin);
         System.out.println(result);
 
     }
