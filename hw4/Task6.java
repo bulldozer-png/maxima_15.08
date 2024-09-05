@@ -3,7 +3,7 @@ package homework.hw4;
 public class Task6 {
     public static void main(String[] args) {
 
-        int[] numbers = new int[5];
+        int[] numbers = new int[20];
         int counter = 0;
         int resultMax = Integer.MIN_VALUE;
         int resultMin = Integer.MAX_VALUE;
