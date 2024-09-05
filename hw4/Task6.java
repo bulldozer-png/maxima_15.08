@@ -3,32 +3,24 @@ package homework.hw4;
 public class Task6 {
     public static void main(String[] args) {
 
-        int[] numbers = new int[20];
+        int[] numbers = new int[5];
         int counter = 0;
-
-        int resultMax = 0;
-        int resultMin = 0;
-
-        int maxValue = 2147483647;
-        int minValue = -2147483648;
+        int resultMax = Integer.MIN_VALUE;
+        int resultMin = Integer.MAX_VALUE;
 
         while (counter < numbers.length) {
-
             numbers[counter] = (int) (Math.random() * 100);
 
-            if (numbers[counter] > minValue) {
+            if (numbers[counter] > resultMax) {
                 resultMax = numbers[counter];
-                minValue = numbers[counter];
             }
-
-            if (numbers[counter] < maxValue) {
+            if (numbers[counter] < resultMin) {
                 resultMin = numbers[counter];
-                maxValue = numbers[counter];
             }
             counter++;
         }
 
-        String result = String.format("%d %d", resultMax, resultMin);
+        String result = String.format("Max: %d | Min: %d", resultMax, resultMin);
         System.out.println(result);
 
     }
