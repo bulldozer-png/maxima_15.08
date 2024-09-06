@@ -11,13 +11,12 @@ public class Task3 {
 
         int counter = 0;
 
-
         while (counter < lines.length) {
-            lines[counter++] = scanner.nextLine();
+            lines[counter] = scanner.nextLine();
+            numbers[counter] = lines[counter++].length();
         }
 
         for (int i = 0; i < lines.length; i++) {
-            numbers[i] = lines[i].length();
             System.out.print(numbers[i] + " ");
         }
 

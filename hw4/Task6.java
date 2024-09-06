@@ -5,27 +5,22 @@ public class Task6 {
 
         int[] numbers = new int[20];
         int counter = 0;
+        int resultMax = Integer.MIN_VALUE;
+        int resultMin = Integer.MAX_VALUE;
 
         while (counter < numbers.length) {
-            numbers[counter++] = (int) (Math.random() * 100);
-        }
+            numbers[counter] = (int) (Math.random() * 100);
 
-        int maxValue = 0;
-        int minValue;
-        for (int i = 0; i < numbers.length; i++) {
-            if (maxValue < numbers[i]) {
-                maxValue = numbers[i];
+            if (numbers[counter] > resultMax) {
+                resultMax = numbers[counter];
             }
-        }
-
-        minValue = maxValue;
-        for (int j = 0; j < numbers.length; j++) {
-            if (minValue > numbers[j]) {
-                minValue = numbers[j];
+            if (numbers[counter] < resultMin) {
+                resultMin = numbers[counter];
             }
+            counter++;
         }
 
-        String result = String.format("%d %d", maxValue, minValue);
+        String result = String.format("Max: %d | Min: %d", resultMax, resultMin);
         System.out.println(result);
 
     }
