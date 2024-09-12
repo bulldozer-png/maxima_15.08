@@ -10,8 +10,7 @@ public class Task3 {
         int maxCustomWords = 8;
 
         for (int i = 0; i < maxCustomWords; i++) {
-            String someText = scanner.next();
-            allWords[i] = someText;
+            allWords[i] = scanner.next();
         }
 
         for (int i = allWords.length - 1; i >= 0; i--) {

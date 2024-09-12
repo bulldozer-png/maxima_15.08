@@ -9,22 +9,23 @@ public class Task2 {
         String[] allWords = new String[5];
 
         for (int i = 0; i < allWords.length; i++) {
-            String someText = scanner.next();
-            allWords[i] = someText;
+            allWords[i] = scanner.next();
         }
 
-        for (int k = 0; k < allWords.length; k++) {
-            for (int j = 0; j < allWords.length - 1 - k; j++) {
-                if (allWords[j].length() - allWords[j + 1].length() > 0) {
-                    String temp = allWords[j + 1];
-                    allWords[j + 1] = allWords[j];
-                    allWords[j] = temp;
-                }
+        String maxLengthStr = allWords[0];
+        String minLengthStr = allWords[0];
+
+        for (int j = 1; j < allWords.length; j++) {
+            if (allWords[j].length() > maxLengthStr.length()) {
+                maxLengthStr = allWords[j];
+            }
+
+            if (allWords[j].length() < maxLengthStr.length()) {
+                minLengthStr = allWords[j];
             }
         }
 
-
-        System.out.printf("Самая короткая строка - '%s' %d \nСамая длинная строка - '%s' %d", allWords[0], allWords[0].length(), allWords[allWords.length - 1], allWords[allWords.length - 1].length());
+        System.out.printf("Самая короткая строка - '%s' %d \nСамая длинная строка - '%s' %d", minLengthStr, minLengthStr.length(), maxLengthStr, maxLengthStr.length());
 
     }
 }

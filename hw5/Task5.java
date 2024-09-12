@@ -9,22 +9,19 @@ public class Task5 {
         Scanner scanner = new Scanner(System.in);
         String[] strings = new String[6];
 
-
         for (int i = 0; i < strings.length; i++) {
-            String someText = scanner.next();
-            strings[i] = someText;
+            strings[i] = scanner.next();
         }
 
         for (int i = 0; i < strings.length; i++) {
-            for (int j = 1; j < strings.length - 1; j++) {
+            String tempItemValue = strings[i];
 
-                if (strings[j].equals(strings[i])) {
+            for (int j = i + 1; j < strings.length; j++) {
+                if (strings[j].equals(tempItemValue)) {
                     strings[i] = null;
-                    break;
                 }
             }
         }
-
 
         System.out.println(Arrays.toString(strings));
 

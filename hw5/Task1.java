@@ -8,12 +8,12 @@ public class Task1 {
         Scanner scanner = new Scanner(System.in);
 
         do {
-            String someText = scanner.next();
+            String someText = scanner.nextLine();
             if (someText.isEmpty()) {
                 break;
             } else if (someText.length() % 2 == 0) {
                 System.out.println(someText.repeat(2));
-            } else if (someText.length() % 2 != 0) {
+            } else {
                 System.out.println(someText.repeat(3));
             }
 
