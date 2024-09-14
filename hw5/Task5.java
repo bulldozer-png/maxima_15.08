@@ -16,9 +16,14 @@ public class Task5 {
         for (int i = 0; i < strings.length; i++) {
             String tempItemValue = strings[i];
 
-            for (int j = i + 1; j < strings.length; j++) {
-                if (strings[j].equals(tempItemValue)) {
-                    strings[i] = null;
+            if (tempItemValue != null) {
+                for (int j = i + 1; j < strings.length; j++) {
+
+                    if (tempItemValue.equals(strings[j])) {
+                        strings[i] = null;
+                        strings[j] = null;
+                    }
+
                 }
             }
         }

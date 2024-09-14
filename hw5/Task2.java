@@ -20,7 +20,7 @@ public class Task2 {
                 maxLengthStr = allWords[j];
             }
 
-            if (allWords[j].length() < maxLengthStr.length()) {
+            if (allWords[j].length() < minLengthStr.length()) {
                 minLengthStr = allWords[j];
             }
         }
