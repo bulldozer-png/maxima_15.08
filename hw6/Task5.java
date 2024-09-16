@@ -5,9 +5,11 @@ import java.util.Scanner;
 public class Task5 {
     public static void main(String[] args) {
 
-        int number_one = getInt();
-        int number_two = getInt();
-        char operation = getOperation();
+        Scanner scanner = new Scanner(System.in);
+
+        int number_one = getInt(scanner);
+        int number_two = getInt(scanner);
+        char operation = getOperation(scanner);
 
         if (number_two == 0 && operation == '/') {
             System.out.println("На ноль делить нельзя.");
@@ -16,15 +18,14 @@ public class Task5 {
             System.out.println(answer);
         }
 
+        scanner.close();
     }
 
-    static int getInt() {
-        Scanner scanner = new Scanner(System.in);
+    static int getInt(Scanner scanner) {
         return scanner.nextInt();
     }
 
-    static char getOperation() {
-        Scanner scanner = new Scanner(System.in);
+    static char getOperation(Scanner scanner) {
         return scanner.next().charAt(0);
     }
 

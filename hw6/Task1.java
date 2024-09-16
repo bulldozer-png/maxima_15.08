@@ -9,9 +9,7 @@ public class Task1 {
     }
 
     static int toCube(int number) {
-        number = (int) Math.pow(number, 3);
-        return number;
+        return (int) Math.pow(number, 3);
     }
-
 
 }
