@@ -2,12 +2,13 @@ package homework.hw8.Animals;
 
 public class Cat extends Animal {
     public Cat(String food, String location) {
-        super(food, location);
+        this.food = food;
+        this.location = location;
     }
 
     @Override
     public void eat() {
-        System.out.println("Кот есть мокрый корм.");
+        System.out.println(this.food);
     }
 
     @Override

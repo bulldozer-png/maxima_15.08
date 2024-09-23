@@ -2,12 +2,10 @@ package homework.hw8.Animals;
 
 public class Animal {
 
-    private String food;
-    private String location;
+    protected String food;
+    protected String location;
 
-    public Animal(String food, String location) {
-        this.food = food;
-        this.location = location;
+    public Animal() {
     }
 
     public String getFood() {
