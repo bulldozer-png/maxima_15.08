@@ -1,9 +1,13 @@
 package homework.hw8.Animals;
 
 public class Dog extends Animal {
-    public Dog(String food, String location) {
+
+    private String name;
+
+    public Dog(String food, String location, String name) {
         this.food = food;
         this.location = location;
+        this.name = name;
     }
 
     @Override
@@ -18,6 +22,9 @@ public class Dog extends Animal {
 
     @Override
     public String toString() {
+        if (name.equals("REX")){
+            return "Собака по кличке Рекс";
+        }
         return "Собака";
     }
 }
