@@ -16,23 +16,27 @@ public class Task6 {
 
         String minResult = strings.get(0);
         String maxResult = strings.get(0);
+        int minIndex = 0;
+        int maxIndex = 0;
+
 
         for (int i = 1; i < strings.size(); i++) {
             if (minResult.length() > strings.get(i).length()) {
                 minResult = strings.get(i);
+                minIndex = i;
             }
             if (maxResult.length() < strings.get(i).length()) {
                 maxResult = strings.get(i);
+                maxIndex = i;
             }
         }
 
-        int minIndex = strings.indexOf(minResult);
-        int maxIndex = strings.indexOf(maxResult);
-
         if (maxIndex < minIndex) {
             System.out.println("Длинная строка встречается раньше: " + maxResult);
-        } else {
+        } else if (maxIndex > minIndex) {
             System.out.println("Короткая строка встречается раньше: " + minResult);
+        } else {
+            System.out.println("Длина строк одинаковая.");
         }
 
     }
