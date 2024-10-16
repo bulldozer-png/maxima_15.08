@@ -6,25 +6,93 @@ import java.util.Map;
 public class Task5 {
     public static void main(String[] args) {
 
-        Map<String, Sklad> store = new HashMap<>();
+        Map<String, Object> store = new HashMap<>();
 
-        store.put("SIM", new Sklad(5, "8-22", "Podolsk"));
-        store.put("Planshet", new Sklad(2, "10-22", "Khimki"));
-        store.put("Telephon", new Sklad(3, "11-22", "Tver"));
-        store.put("PC", new Sklad(9, "8-19", "Kaluga"));
-        store.put("Printer", new Sklad(5, "8-20", "Korolev"));
-        store.put("Fax", new Sklad(4, "8-22", "Orehovo"));
-        store.put("Nayshniki", new Sklad(2, "8-21", "Ijevsk"));
-        store.put("Chasy", new Sklad(1, "6-22", "MSK"));
-        store.put("Kolonka", new Sklad(6, "11-18", "SPB"));
-        store.put("TV", new Sklad(5, "8-22", "Pytilkovo"));
-        store.put("Aksessyari", new Sklad(4, "8-22", "Perm"));
-        store.put("Consoli", new Sklad(3, "10-22", "Lipeck"));
+        store.put("SIM", new SIMCard(5));
+        store.put("Planshet", new Planshet(15));
+        store.put("Telephon", new Telephon(51));
+        store.put("PC", new PC(25));
+        store.put("Printer", new Printer(52));
+        store.put("Fax", new Fax(53));
+        store.put("Nayshniki", new Nayshniki(35));
+        store.put("Chasy", new Chasy(45));
+        store.put("Kolonka", new Kolonka(54));
+        store.put("TV", new TV(55));
 
-        for (String key : store.keySet()) {
-            Sklad sklad = store.get(key);
-            System.out.println(key + " - " + sklad.getCount() + " шт.");
+
+        for (Map.Entry<String, Object> entry : store.entrySet()) {
+            System.out.println(entry.getKey() + " - " + entry.getValue());
         }
-
     }
 }
+
+
+class SIMCard extends Sklad {
+    public SIMCard(Integer count) {
+        super(count);
+    }
+}
+
+class Planshet extends Sklad {
+    public Planshet(Integer count) {
+        super(count);
+    }
+}
+
+class Telephon extends Sklad {
+    public Telephon(Integer count) {
+        super(count);
+    }
+}
+
+class PC extends Sklad {
+    public PC(Integer count) {
+        super(count);
+    }
+}
+
+class Printer extends Sklad {
+    public Printer(Integer count) {
+        super(count);
+    }
+}
+
+class Fax extends Sklad {
+    public Fax(Integer count) {
+        super(count);
+    }
+}
+
+class Nayshniki extends Sklad {
+    public Nayshniki(Integer count) {
+        super(count);
+    }
+}
+
+class Chasy extends Sklad {
+    public Chasy(Integer count) {
+        super(count);
+    }
+}
+
+class Kolonka extends Sklad {
+    public Kolonka(Integer count) {
+        super(count);
+    }
+}
+
+class TV extends Sklad {
+    public TV(Integer count) {
+        super(count);
+    }
+}
+
+
+
+
+
+
+
+
+
+

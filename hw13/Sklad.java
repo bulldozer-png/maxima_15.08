@@ -3,17 +3,13 @@ package homework.hw13;
 public class Sklad {
 
     private Integer count;
-    private String workTime;
-    private String cityName;
 
-    public Sklad(Integer count, String workTime, String cityName) {
+    public Sklad(Integer count) {
         this.count = count;
-        this.workTime = workTime;
-        this.cityName = cityName;
     }
 
-    public Integer getCount() {
-        return count;
+    @Override
+    public String toString() {
+        return count.toString();
     }
-
 }

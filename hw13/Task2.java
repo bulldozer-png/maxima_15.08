@@ -27,7 +27,8 @@ public class Task2 {
 
 
         if (months.containsKey(nameOfMonth)) {
-            System.out.println(nameOfMonth + " is the " + months.get(nameOfMonth) + " month.");
+            String result = String.format("%s is the %d month", nameOfMonth, months.get(nameOfMonth));
+            System.out.println(result);
         } else {
             System.out.println("Нет такого месяца!");
         }
