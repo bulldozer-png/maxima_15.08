@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+
+    <bean id="cat" class="ru.maxima.model.Cat">
+        <constructor-arg index="0" value="Barsik"/>
+        <constructor-arg index="1" value="3"/>
+    </bean>
+
+    <bean id="dog" class="ru.maxima.model.Dog">
+        <constructor-arg index="0" value="Bobik"/>
+        <constructor-arg index="1" value="5"/>
+    </bean>
+
+    <bean id="duck" class="ru.maxima.model.Duck">
+        <constructor-arg index="0" value="Donald"/>
+        <constructor-arg index="1" value="2"/>
+    </bean>
+
+    <bean id="tiger" class="ru.maxima.model.Tiger">
+        <constructor-arg index="0" value="Amur"/>
+        <constructor-arg index="1" value="4"/>
+    </bean>
+
+    <bean id="zoo" class="ru.maxima.model.Zoo">
+        <constructor-arg>
+            <list>
+                <ref bean="cat"/>
+                <ref bean="dog"/>
+                <ref bean="duck"/>
+                <ref bean="tiger"/>
+            </list>
+        </constructor-arg>
+    </bean>
+
+</beans>
