@@ -7,37 +7,69 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <context:property-placeholder location="player.properties"/>
 
-
-    <bean id="cat" class="ru.maxima.model.Cat">
-        <constructor-arg index="0" value="Barsik"/>
-        <constructor-arg index="1" value="3"/>
-    </bean>
-
-    <bean id="dog" class="ru.maxima.model.Dog">
-        <constructor-arg index="0" value="Bobik"/>
-        <constructor-arg index="1" value="5"/>
-    </bean>
-
-    <bean id="duck" class="ru.maxima.model.Duck">
-        <constructor-arg index="0" value="Donald"/>
-        <constructor-arg index="1" value="2"/>
-    </bean>
-
-    <bean id="tiger" class="ru.maxima.model.Tiger">
-        <constructor-arg index="0" value="Amur"/>
-        <constructor-arg index="1" value="4"/>
-    </bean>
-
-    <bean id="zoo" class="ru.maxima.model.Zoo">
-        <constructor-arg>
+    <bean id="player" class="ru.maxima.hw17.an_radio.RadioPlayer">
+        <property name="radio">
             <list>
-                <ref bean="cat"/>
-                <ref bean="dog"/>
-                <ref bean="duck"/>
-                <ref bean="tiger"/>
+                <ref bean="maximum"/>
+                <ref bean="retro"/>
+                <ref bean="nashe"/>
             </list>
-        </constructor-arg>
+        </property>
     </bean>
+
+
+    <bean id="maximum" class="ru.maxima.hw17.an_radio.MaximumFM"/>
+
+    <bean id="retro" class="ru.maxima.hw17.an_radio.RetroFM"/>
+
+    <bean id="nashe" class="ru.maxima.hw17.an_radio.NasheFM"/>
+
+
+<!--    <bean id="player" class="ru.maxima.hw17.di_radio.RadioPlayer">-->
+<!--        <constructor-arg ref="maximum"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="maximum" class="ru.maxima.hw17.di_radio.MaximumFM">-->
+
+<!--    </bean>-->
+
+<!--    <bean id="retro" class="ru.maxima.hw17.di_radio.RetroFM">-->
+
+<!--    </bean>-->
+
+
+
+    <!--    <bean id="cat" class="ru.maxima.model.Cat">-->
+    <!--        <constructor-arg index="0" value="Barsik"/>-->
+    <!--        <constructor-arg index="1" value="3"/>-->
+    <!--    </bean>-->
+
+    <!--    <bean id="dog" class="ru.maxima.model.Dog">-->
+    <!--        <constructor-arg index="0" value="Bobik"/>-->
+    <!--        <constructor-arg index="1" value="5"/>-->
+    <!--    </bean>-->
+
+    <!--    <bean id="duck" class="ru.maxima.model.Duck">-->
+    <!--        <constructor-arg index="0" value="Donald"/>-->
+    <!--        <constructor-arg index="1" value="2"/>-->
+    <!--    </bean>-->
+
+    <!--    <bean id="tiger" class="ru.maxima.model.Tiger">-->
+    <!--        <constructor-arg index="0" value="Amur"/>-->
+    <!--        <constructor-arg index="1" value="4"/>-->
+    <!--    </bean>-->
+
+    <!--    <bean id="zoo" class="ru.maxima.model.Zoo">-->
+    <!--        <constructor-arg>-->
+    <!--            <list>-->
+    <!--                <ref bean="cat"/>-->
+    <!--                <ref bean="dog"/>-->
+    <!--                <ref bean="duck"/>-->
+    <!--                <ref bean="tiger"/>-->
+    <!--            </list>-->
+    <!--        </constructor-arg>-->
+    <!--    </bean>-->
 
 </beans>
