@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Person</title>
+</head>
+<body>
+
+<p><span>ID: </span><span th:text="${keyPersonById.getId()}"></span></p>
+<br>
+<p><span>Name: </span><span th:text="${keyPersonById.getName()}"></span></p>
+<p><span>Age: </span><span th:text="${keyPersonById.getAge()}"></span></p>
+<p><span>E-mail: </span><span th:text="${keyPersonById.getEMail()}"></span></p>
+
+<a th:href="@{/people/edit/{id}(id=${keyPersonById.getId()})}">Edit</a>
+<br><br>
+<a th:href="@{/people}">Back</a>
+<br><br>
+
+<form th:method="POST" th:action="@{/people/delete/{id}(id=${keyPersonById.getId()})}">
+    <input type="submit" value="Delete this person">
+</form>
+
+</body>
+</html>
