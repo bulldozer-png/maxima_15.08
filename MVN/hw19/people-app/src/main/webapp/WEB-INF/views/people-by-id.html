@@ -10,7 +10,7 @@
 <br>
 <p><span>Name: </span><span th:text="${keyPersonById.getName()}"></span></p>
 <p><span>Age: </span><span th:text="${keyPersonById.getAge()}"></span></p>
-<p><span>E-mail: </span><span th:text="${keyPersonById.getEMail()}"></span></p>
+<p><span>E-mail: </span><span th:text="${keyPersonById.getEmail()}"></span></p>
 
 <a th:href="@{/people/edit/{id}(id=${keyPersonById.getId()})}">Edit</a>
 <br><br>

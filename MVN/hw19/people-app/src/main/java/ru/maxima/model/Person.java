@@ -24,6 +24,6 @@ public class Person {
 
     @NotEmpty(message = "Email can`t be empty")
     @Email(message = "Email must be valid")
-    private String eMail;
+    private String email;
 
 }
